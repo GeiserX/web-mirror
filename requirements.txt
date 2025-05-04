@@ -1,0 +1,8 @@
+beautifulsoup4==4.12.2
+requests==2.31.0
+requests-cache==1.2.0
+msedge-selenium-tools==3.141.4
+selenium==3.141.0
+lxml==4.9.2
+#html5lib==1.1
+playwright==1.42.0
