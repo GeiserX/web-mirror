@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#006064"/>
+      <stop offset="100%" style="stop-color:#1A1A2E"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="200" rx="12" fill="url(#bg)"/>
+  <rect width="900" height="200" rx="12" fill="url(#grid)"/>
+  <!-- Globe with mirror arrows icon -->
+  <g transform="translate(100, 100)" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="2">
+    <!-- Globe -->
+    <circle cx="-15" cy="0" r="25" fill="rgba(255,255,255,0.08)"/>
+    <ellipse cx="-15" cy="0" rx="12" ry="25"/>
+    <line x1="-40" y1="0" x2="10" y2="0" stroke="rgba(255,255,255,0.5)"/>
+    <ellipse cx="-15" cy="-12" rx="22" ry="6" stroke="rgba(255,255,255,0.4)"/>
+    <ellipse cx="-15" cy="12" rx="22" ry="6" stroke="rgba(255,255,255,0.4)"/>
+    <!-- Mirror arrows -->
+    <path d="M 18,-10 C 18,-10 28,-15 38,-10" stroke-width="2"/>
+    <polyline points="33,-14 38,-10 33,-6" fill="none" stroke-width="2"/>
+    <path d="M 38,10 C 38,10 28,15 18,10" stroke-width="2"/>
+    <polyline points="23,14 18,10 23,6" fill="none" stroke-width="2"/>
+  </g>
+  <!-- Title -->
+  <text x="480" y="95" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="48" font-weight="bold" fill="white" text-anchor="middle">web-mirror</text>
+  <!-- Subtitle -->
+  <text x="480" y="125" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.75)" text-anchor="middle">Mirror any webpage for offline access</text>
+</svg>
