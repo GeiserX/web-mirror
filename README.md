@@ -12,5 +12,5 @@
 
 - [Wayback-Archive](https://github.com/GeiserX/Wayback-Archive) — Download complete websites from the Wayback Machine
 - [Way-CMS](https://github.com/GeiserX/Way-CMS) — Simple web CMS for editing archived HTML/CSS files
-- [Website-Diff](https://github.com/GeiserX/Website-Diff) — Web page comparison with Wayback Machine support
+- [Wayback-Diff](https://github.com/GeiserX/Wayback-Diff) — Web page comparison with Wayback Machine support
 - [media-download](https://github.com/GeiserX/media-download) — Download all media files from any web page
