@@ -41,3 +41,28 @@ updates:
       applies-to: security-updates
       patterns:
       - '*'
+- package-ecosystem: github-actions
+  directory: /
+  schedule:
+    interval: monthly
+  open-pull-requests-limit: 10
+  commit-message:
+    prefix: ci
+  labels:
+  - ci
+  - automated
+  groups:
+    minor-and-patch:
+      patterns:
+      - '*'
+      update-types:
+      - minor
+      - patch
+    github-actions-security:
+      applies-to: security-updates
+      patterns:
+      - '*'
+  ignore:
+  - dependency-name: '*'
+    update-types:
+    - version-update:semver-major
