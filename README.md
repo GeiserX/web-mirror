@@ -6,6 +6,10 @@
 
 <p align="center">Mirror any webpage to a local server for offline access</p>
 
+<p align="center">
+  <a href="https://codecov.io/gh/GeiserX/web-mirror"><img src="https://img.shields.io/codecov/c/github/GeiserX/web-mirror?style=flat-square" alt="Coverage"></a>
+</p>
+
 ---
 
 ## Related Web Archiving Tools
