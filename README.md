@@ -18,3 +18,14 @@
 - [Way-CMS](https://github.com/GeiserX/Way-CMS) — Simple web CMS for editing archived HTML/CSS files
 - [Wayback-Diff](https://github.com/GeiserX/Wayback-Diff) — Web page comparison with Wayback Machine support
 - [media-download](https://github.com/GeiserX/media-download) — Download all media files from any web page
+
+## Related Projects
+
+| Project | Description |
+|---------|-------------|
+| [Wayback-Archive](https://github.com/GeiserX/Wayback-Archive) | Download complete websites from the Wayback Machine with full asset preservation |
+| [Wayback-Diff](https://github.com/GeiserX/Wayback-Diff) | Intelligent web page comparison tool with Wayback Machine support |
+| [Website-Diff](https://github.com/GeiserX/Website-Diff) | Intelligent web page comparison tool with visual regression testing |
+| [Way-CMS](https://github.com/GeiserX/Way-CMS) | Simple web CMS for editing HTML/CSS files downloaded from Wayback Archive |
+| [media-download](https://github.com/GeiserX/media-download) | Download all media files from any web page into a folder schema |
+| [n8n-nodes-way-cms](https://github.com/GeiserX/n8n-nodes-way-cms) | n8n community node for Way-CMS archived web content management |
