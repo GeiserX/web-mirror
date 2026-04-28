@@ -1,4 +1,4 @@
-# AGENTS.md — Web Mirror
+# CLAUDE.md — Web Mirror
 
 ## Project Overview
 
