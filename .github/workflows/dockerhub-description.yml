@@ -10,7 +10,7 @@ jobs:
   update-description:
     runs-on: [self-hosted, Linux, X64]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - uses: peter-evans/dockerhub-description@v4
         with:
