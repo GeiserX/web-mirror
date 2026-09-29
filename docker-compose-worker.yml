@@ -1,6 +1,6 @@
 services:
   web-mirror:
-    image: drumsergio/web-mirror:0.0.1
+    image: drumsergio/web-mirror:1.0.2
     volumes:
       - Z:\:/data:rw
     dns:
