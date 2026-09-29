@@ -1,11 +1,11 @@
 version: '3.9'
 services:
   web-mirror:
-    image: drumsergio/web-mirror:latest
+    image: drumsergio/web-mirror:1.0.2
     volumes:
       - G:/:/data/
   # nginx:
-  #   image: nginx:latest
+  #   image: nginx:1.29-alpine
   #   volumes:
   #     - G:/:/usr/share/nginx/html
   #     - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
