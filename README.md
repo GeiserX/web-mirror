@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/banner.svg" alt="web-mirror banner" width="900">
+  <img src="https://raw.githubusercontent.com/GeiserX/web-mirror/main/docs/images/banner.svg" alt="web-mirror banner" width="900">
 </p>
 
 <h1 align="center">web-mirror</h1>
