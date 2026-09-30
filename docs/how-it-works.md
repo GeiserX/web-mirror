@@ -3,7 +3,7 @@
 web-mirror is one Python script, [`src/main2.py`](https://github.com/GeiserX/web-mirror/blob/main/src/main2.py), about 90 lines. The Docker image runs it once and exits.
 
 ```mermaid
-flowchart LR
+flowchart TB
     S[Your site]
     subgraph image [web-mirror container]
         L[Page list<br/>line 34, or the sitemap]
@@ -26,7 +26,7 @@ flowchart LR
 ## One run, step by step
 
 1. Creates `/data/` and installs a `requests` cache at `/data/sitemap.sqlite`.
-2. Fetches `https://<site>/es/sitemap.xml` and collects its `<loc>` entries. The shipped code then returns the fixed list on line 34 instead ([Configuration](configuration.md#using-the-sitemap)).
+2. Fetches `https://<site>/es/sitemap.xml`, or reads it from the cache after the first successful fetch, and collects its `<loc>` entries. The shipped code then returns the fixed list on line 34 instead ([Configuration](configuration.md#using-the-sitemap)).
 3. Starts headless Chromium with a fixed `User-Agent` and, for each page in the list:
     1. opens it in a new tab and waits for the `load` event, then 3 more seconds;
     2. takes the page as the browser now holds it (`page.content()`), so text that JavaScript added is in the saved file;

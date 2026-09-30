@@ -26,7 +26,7 @@ For example, to save the front page and one article of `https://example.com`:
 
 Line 34 returns a fixed list, and line 35 holds the alternative, commented out. Replace line 34 with `return links` and the run saves every `<loc>` entry of the sitemap instead.
 
-The sitemap is fetched from `web + language + "/sitemap.xml"` (line 29), which with the shipped `language = "es"` (line 13) is `https://<your site>/es/sitemap.xml`. For a sitemap at another path, edit line 29. The fetch runs on every start, even when line 34 returns a fixed list, so `web` must be a host that answers; see [Troubleshooting](troubleshooting.md#the-run-stops-with-a-connectionerror).
+The sitemap is fetched from `web + language + "/sitemap.xml"` (line 29), which with the shipped `language = "es"` (line 13) is `https://<your site>/es/sitemap.xml`. For a sitemap at another path, edit line 29. The fetch runs even when line 34 returns a fixed list, so `web` must be a host that answers the first time; see [Troubleshooting](troubleshooting.md#the-run-stops-with-a-connectionerror). After that, a 200 response cached in `data/sitemap.sqlite` is reused without a network call, and deleting that file fetches the sitemap again ([Usage](usage.md#run-it-again)).
 
 A sitemap index (a sitemap that lists other sitemaps) is not followed: its `<loc>` entries are the child sitemaps' URLs, and the run would save those XML files as pages.
 

@@ -40,7 +40,7 @@ Docker runs in a virtual machine on a Mac, and the folder you ran the command fr
 W: GPG error: http://archive.ubuntu.com/ubuntu noble-backports InRelease: At least one invalid signature was encountered.
 ```
 
-Docker's disk is full. `docker system df` shows how much the images use; free space with `docker image prune` or by removing images you no longer need, then build again.
+The usual cause is a full Docker disk. Check `docker system df` first: if the images and build cache fill the disk, free space with `docker image prune` or by removing images you no longer need, then build again.
 
 ## The run stops with a ConnectionError
 
@@ -48,7 +48,7 @@ Docker's disk is full. `docker system df` shows how much the images use; free sp
 requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.place.holder', port=443): Max retries exceeded with url: /es/sitemap.xml (Caused by NameResolutionError("HTTPSConnection(host='www.place.holder', port=443): Failed to resolve 'www.place.holder' ([Errno -2] Name or service not known)"))
 ```
 
-`src/main2.py` still names the placeholder site, or line 27 names a host that does not resolve. The sitemap is fetched on every start, even when line 34 returns a fixed list. Edit lines 27, 34, 71 and 72 ([Configuration](configuration.md#the-lines-to-edit)) and build again, or mount the edited file ([Usage](usage.md#use-the-published-image)).
+`src/main2.py` still names the placeholder site, or line 27 names a host that does not resolve. The sitemap is fetched even when line 34 returns a fixed list, until a 200 response for it sits in `data/sitemap.sqlite`. Edit lines 27, 34, 71 and 72 ([Configuration](configuration.md#the-lines-to-edit)) and build again, or mount the edited file ([Usage](usage.md#use-the-published-image)).
 
 ## The copy opens without its styles or images
 
