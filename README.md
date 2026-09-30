@@ -14,6 +14,10 @@
 
 The site and the page list are set in the code, not by a setting: `src/main2.py` ships with the placeholder domain `www.place.holder` and a one-page list (line 34), so you edit it before you build. It runs in Docker and writes the copy to `/data`.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/GeiserX/web-mirror/main/docs/images/screenshots/run.png" alt="A run of web-mirror: the amd64 build on an Apple Silicon Mac, the one-line log of the page it saves from example.com, the two files it wrote, and nginx serving the copy" width="820">
+</p>
+
 ## Features
 
 - Renders each page in headless Chromium through Playwright, so pages built by JavaScript are captured.
@@ -31,7 +35,21 @@ git clone https://github.com/GeiserX/web-mirror.git && cd web-mirror
 docker build -t web-mirror . && docker run --rm -v "$PWD/data:/data" web-mirror
 ```
 
+On an Apple Silicon Mac, add `--platform linux/amd64` to `docker build` and `docker run`, and let Docker emulate amd64 with Rosetta (Colima `--vz-rosetta`, or Docker Desktop's Rosetta setting): the base image exists for amd64 only, and Chromium crashes under QEMU.
+
 The copy lands in `./data`. To serve it, run `docker run --rm -p 8080:80 -v "$PWD/data:/usr/share/nginx/html:ro" -v "$PWD/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro" nginx:1.29-alpine` and open http://localhost:8080. The published image (`drumsergio/web-mirror:1.0.2`, amd64) carries the placeholder, so it only helps as a base for your own build.
+
+## Documentation
+
+The full documentation is at [geiserx.github.io/web-mirror](https://geiserx.github.io/web-mirror/).
+
+- [Getting started](https://geiserx.github.io/web-mirror/getting-started/): what you need, the four lines to edit, build, run, and what a finished run looks like
+- [Configuration](https://geiserx.github.io/web-mirror/configuration/): every constant in `src/main2.py`, and how to save the whole sitemap
+- [Usage](https://geiserx.github.io/web-mirror/usage/): where each page lands, serving the copy with nginx, running again, the published image without a build
+- [How it works](https://geiserx.github.io/web-mirror/how-it-works/): what happens to each page, which links are rewritten, what is not saved
+- [Troubleshooting](https://geiserx.github.io/web-mirror/troubleshooting/): the arm64 build error, the QEMU crash, a full Docker disk, the placeholder's ConnectionError, video pages
+- [Development](https://geiserx.github.io/web-mirror/development/): tests, CI, releases and the docs build
+- [Related projects](https://geiserx.github.io/web-mirror/related/): the other web-archiving tools
 
 ## Related projects
 
