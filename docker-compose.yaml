@@ -1,7 +1,7 @@
 version: '3.9'
 services:
   web-mirror:
-    image: drumsergio/web-mirror:1.0.2
+    image: drumsergio/web-mirror:1.0.3
     volumes:
       - G:/:/data/
   # nginx:

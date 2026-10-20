@@ -83,7 +83,9 @@ if __name__ == '__main__':
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
     }
     with sync_playwright() as p:
-        browser = p.chromium.launch()
+        # The full Chromium, not the default headless shell: the shell reads no
+        # managed policies, so it would ignore the CA distrust in the image.
+        browser = p.chromium.launch(channel="chromium")
         context = browser.new_context(extra_http_headers=headers)
         for link in links:
             logger.info(link)

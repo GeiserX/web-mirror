@@ -37,7 +37,7 @@ docker build -t web-mirror . && docker run --rm -v "$PWD/data:/data" web-mirror
 
 On an Apple Silicon Mac, add `--platform linux/amd64` to `docker build` and `docker run`, and let Docker emulate amd64 with Rosetta (Colima `--vz-rosetta`, or Docker Desktop's Rosetta setting): the base image exists for amd64 only, and Chromium crashes under QEMU.
 
-The copy lands in `./data`. To serve it, run `docker run --rm -p 8080:80 -v "$PWD/data:/usr/share/nginx/html:ro" -v "$PWD/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro" nginx:1.29-alpine` and open http://localhost:8080. The published image (`drumsergio/web-mirror:1.0.2`, amd64) carries the placeholder, so it only helps as a base for your own build.
+The copy lands in `./data`. To serve it, run `docker run --rm -p 8080:80 -v "$PWD/data:/usr/share/nginx/html:ro" -v "$PWD/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro" nginx:1.29-alpine` and open http://localhost:8080. The published image (`drumsergio/web-mirror:1.0.3`, amd64) carries the placeholder, so it only helps as a base for your own build.
 
 ## Documentation
 
