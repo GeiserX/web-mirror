@@ -13,4 +13,4 @@ web-mirror is one of a set of web-archiving tools by the same author.
 ## Where web-mirror is published
 
 - Source: [GeiserX/web-mirror](https://github.com/GeiserX/web-mirror) on GitHub.
-- Image: [drumsergio/web-mirror](https://hub.docker.com/r/drumsergio/web-mirror) on Docker Hub, tags `1.0.2`, `v1.0.2` and `latest`, linux/amd64.
+- Image: [drumsergio/web-mirror](https://hub.docker.com/r/drumsergio/web-mirror) on Docker Hub, tags `1.0.3`, `v1.0.3` and `latest`, linux/amd64.

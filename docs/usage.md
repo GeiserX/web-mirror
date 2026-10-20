@@ -43,13 +43,13 @@ The sitemap and the video downloads go through a `requests` cache in `data/sitem
 
 ## Use the published image
 
-`drumsergio/web-mirror:1.0.2` on Docker Hub is the same image with the placeholder site. Instead of building, mount your edited `src/main2.py` over the one inside it:
+`drumsergio/web-mirror:1.0.3` on Docker Hub is the same image with the placeholder site. Instead of building, mount your edited `src/main2.py` over the one inside it:
 
 ```bash
 docker run --rm \
   -v "$PWD/src/main2.py:/app/src/main2.py:ro" \
   -v "$PWD/data:/data" \
-  drumsergio/web-mirror:1.0.2
+  drumsergio/web-mirror:1.0.3
 ```
 
 On an arm64 host add `--platform linux/amd64`; the image exists for amd64 only.

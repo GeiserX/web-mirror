@@ -80,5 +80,5 @@ Open an [issue](https://github.com/GeiserX/web-mirror/issues) with:
 
 - the output of the run, from the first line to the error;
 - lines 27, 34, 71 and 72 of your `src/main2.py`, with the site's address if you can share it;
-- whether you built the image or mounted the file into `drumsergio/web-mirror:1.0.2`;
+- whether you built the image or mounted the file into `drumsergio/web-mirror:1.0.3`;
 - `uname -m` and `docker version` of the machine that ran it.
