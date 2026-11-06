@@ -2,7 +2,7 @@
  *
  * banner.svg draws the name in white on #0b0b12, the tagline in lavender
  * #c4b5fd, and a mirror ball whose accent facet is violet #a78bfa. The header
- * and the dark page use the banner background, links the violet. mkdocs.yml
+ * and the dark page use the banner background, links the violet. zensical.toml
  * sets primary and accent to custom, so nothing is painted until these
  * variables exist.
  */
@@ -39,12 +39,18 @@
 }
 
 /* The site name, set the way banner.svg sets the wordmark: white and heavy.
-   Only the first topic is styled; Material puts the page title in a second
+   Only the first topic is styled; the theme puts the page title in a second
    .md-header__topic and swaps them on scroll. */
 .md-header__topic:first-child .md-ellipsis {
-  color: #ffffff;
   font-weight: 800;
   letter-spacing: -0.01em;
+}
+
+/* That colour only on the dark scheme: Zensical's modern header takes the page
+   background, so on the light scheme it is white and a light name would vanish.
+   There the name keeps the default text colour. */
+[data-md-color-scheme="slate"] .md-header__topic:first-child .md-ellipsis {
+  color: #ffffff;
 }
 
 /* Keep the mark and the name close, so they read as one unit. */
@@ -56,7 +62,7 @@
   margin-left: 0.2rem;
 }
 
-/* Buttons. Material paints .md-button in the header colour, which on the
+/* Buttons. The theme paints .md-button in the header colour, which on the
    dark page is also the page background. Outline buttons take the link
    colour instead. */
 .md-typeset .md-button {
