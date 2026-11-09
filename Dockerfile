@@ -1,4 +1,4 @@
-FROM selenium/standalone-edge:155.0
+FROM selenium/standalone-edge:156.0
 # lxml not working in python 3.12
 
 USER root
